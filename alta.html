@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alta de productos</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/alta.css">
+</head>
+<body>
+    
+    <header>
+        <nav>
+            <ul>
+                <li> <a href="./index.html">Inicio</a> </li>
+                <li> <a href="./alta.html">Alta</a> </li>
+                <li> <a href="./carrito.html">Carrito</a> </li>
+                <li> <a href="./contacto.html">Contacto</a> </li>
+                <li> <a href="./nosotros.html">Nosotros</a> </li>
+                <li> <a href="./otra.html">Otra</a> </li>
+            </ul>
+        </nav>
+        
+        <div id="barra-de-busqueda">
+            <a href="index.html" id="logo"><img src="https://cdn3.iconfinder.com/data/icons/shopping-28/32/storefront-64.png" alt="Logo"></a>
+
+            <form action="#" id="buscador">
+                <input type="text" id="rectangulo-buscar">
+
+                <img src="https://cdn2.iconfinder.com/data/icons/general-ui-outlined/16/search-512.png" alt="" id="lupa-busqueda">
+            </form>
+
+            <a href="carrito.html" id="boton-carrito">
+                <img src="https://cdn4.iconfinder.com/data/icons/eon-ecommerce-i-1/32/cart_shop_buy_retail-64.png" alt="Boton-carrito">
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <h1>Alta de productos</h1>
+        <form onsubmit="agregar(event)" class="alta-form">
+            <!-- campo nombre -->
+            <div class="input-group"> 
+                <label for="nombre">Nombre</label>
+                <input type="text" name="nombre" id="nombre">
+                <div class="error-retail"></div>
+            </div>
+
+            <!-- campo precio -->
+            <div class="input-group"> 
+                <label for="precio">Precio</label>
+                <input type="text" name="precio" id="precio">
+                <div class="error-retail"></div>
+            </div>
+
+            <!-- campo stock -->
+            <div class="input-group"> 
+                <label for="stock">Stock</label>
+                <input type="text" name="stock" id="stock">
+                <div class="error-retail"></div>
+            </div>
+
+            <!-- campo marca -->
+            <div class="input-group"> 
+                <label for="marca">Marca</label>
+                <input type="text" name="marca" id="marca">
+                <div class="error-retail"></div>
+            </div>
+
+            <!-- campo marca -->
+            <div class="input-group"> 
+                <label for="categoria">Categoria</label>
+                <input type="text" name="categoria" id="categoria">
+                <div class="error-retail"></div>
+            </div>
+
+            <!-- campo detalles -->
+            <div class="input-group"> 
+                <label for="detalles">Detalles</label>
+                <input type="text" name="detalles" id="detalles">
+                <div class="error-retail"></div>
+            </div>
+
+            <!-- campo foto -->
+            <div class="input-group"> 
+                <label for="foto">foto</label>
+                <input type="text" name="foto" id="foto">
+                <div class="error-retail"></div>
+            </div>
+
+            <!-- campo envio -->
+            <div class="input-group"> 
+                <label for="envio">Envio</label>
+                <input type="checkbox" name="envio" id="envio">
+            </div>
+
+            <!-- boton de envio -->
+
+            <button>Agregar</button>
+        </form>
+
+        <hr>
+<!-- --------------------------------------- -->
+        <table>
+            
+        </table>
+<!--  -------------------------------------- -->
+    </main>
+
+    <footer>
+        <h3>Copyright 2025</h3>
+    </footer>
+
+    <script src="js/productos.js"></script>
+    <script src="js/alta.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+</html>
