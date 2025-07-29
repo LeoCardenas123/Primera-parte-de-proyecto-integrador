@@ -12,8 +12,8 @@ function representarCardsProductos() {
         let producto = productos[i];
         
         cards+=`<section>
-                    <h3>${producto.nombre}</h3>
                     <img id="foto-producto" src="${producto.foto}" alt="">
+                    <h3>${producto.nombre}</h3>
                     <ul>
                         <li>Precio: $${producto.precio}</li>
                         <li>Stock: ${producto.stock}</li>

@@ -2,6 +2,11 @@
 *{
     box-sizing: border-box;
 }
+html{
+    margin: 0;
+    width: 100%;
+    height: auto;
+}
 body, ul{
     margin: 0;
 }
@@ -18,7 +23,6 @@ body{
     font-family: "Roboto", sans-serif;
 
     box-sizing: border-box;
-    margin: auto;
 }
 
 header{
@@ -134,54 +138,93 @@ header nav ul li a{
 main{
     width: 100%;
     height: auto;
-    min-height:83vh;
+    flex-grow: 1;
     padding-left:8px;
     padding-right: 8px;
 
-    overflow: scroll;
+    overflow: auto;
     scrollbar-width: none;
 
     display: flex;
     flex-direction: column;
+
+    background-color:beige;
 }
 h1{
     margin: 8px auto;
+    font-size: 36px;
 }
+
 .section-cards-body{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
     gap: 6px;
 }
 section{
-    border: dashed 1px yellowgreen;
     margin-bottom: 4px;
 
-    border-radius: 12px;
+    border: 1px solid black;
+    border-radius: 8px;
+    overflow: hidden;
 
-    width: 25%;
+    width: 100%;
+    height: 400px;
     display: inline-block;
     text-align: center;
     color: white;
-    background-color: brown;
+    background-color: rgb(53, 43, 43);
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr 0.5fr 2fr;
+}
+
+section ul{
+    grid-row: 3/5;
+    padding: 0;
+
+    padding-left:6px ;
+    padding-right:6px ;
+}
+
+section ul li{
+    list-style: none;
+    text-align: left;
+}
+section ul li:nth-child(1){
+    list-style: none;
+    text-align: left;
+
+    font-weight: 800;
+    color: white;
 }
 h3{
-    margin: 8px auto 12px auto;
+    width: 100%;
+    height: 100%;
     text-decoration: underline;
     text-transform: capitalize;
+    margin: 0;
+
+    display: flex;
+    justify-content: left;
+    align-items: top;
+
+    padding: 8px;
 }
 #foto-producto{
     width: 100%;
+    height: 190px;
 }
 /* --------------------------------------- */
 footer{
     width: 100%;
     height: 8vh;
-    display: flex;
     background-color: rgb(29, 29, 29);
 }
 footer h3{
     color: white;
-    line-height: 8vh;
-    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
