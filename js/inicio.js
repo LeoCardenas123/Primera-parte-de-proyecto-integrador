@@ -64,6 +64,40 @@ const seleccionarCategoria = () =>{
     }
 }
 
+/* ----------------------------------------------------------------------- */
+
+const plegarMenuResposive = () => {
+    console.log('VA FUNCIONANDO')
+    let botonMenuPlegable = document.getElementById('img-menu')
+    let listaPlegable = document.querySelector(".lista-plegable")
+    let botonSalir = document.querySelector(".boton-salir")
+
+    botonMenuPlegable.onclick = () => {
+        console.error('va funcionando')
+
+        botonMenuPlegable.style.display = "none"
+        listaPlegable.style.display = "block"
+        botonSalir.style.display = "block"
+
+    }
+
+    botonSalir.onclick = () => {
+        listaPlegable.style.display = ""  
+        botonMenuPlegable.style.display = ""
+        botonSalir.style.display = ""
+    }
+
+    document.addEventListener("click", (e) => {
+        if (!listaPlegable.contains(e.target), !botonMenuPlegable.contains(e.target)) { 
+            console.log("Click fuera del menú");
+            listaPlegable.style.display = ""  
+            botonMenuPlegable.style.display = ""
+            botonSalir.style.display = ""
+
+        }
+});
+}
+
 
 
 function start() {
@@ -72,4 +106,6 @@ function start() {
     representarCardsProductos(); 
 
     seleccionarCategoria();
+
+    plegarMenuResposive();
 }
