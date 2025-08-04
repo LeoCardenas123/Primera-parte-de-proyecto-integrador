@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alta de productos</title>
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/estilosGenerales.css">
     <link rel="stylesheet" href="css/alta.css">
 </head>
 <body>
@@ -37,7 +37,9 @@
     </header>
 
     <main>
-        <h1>Alta de productos</h1>
+        <div class="section-encabezado">
+            <h1>Alta de productos</h1>
+        </div>
         <form onsubmit="agregar(event)" class="alta-form">
             <!-- campo nombre -->
             <div class="input-group"> 
@@ -67,17 +69,27 @@
                 <div class="error-retail"></div>
             </div>
 
-            <!-- campo marca -->
+            <!-- campo categoria -->
             <div class="input-group"> 
                 <label for="categoria">Categoria</label>
-                <input type="text" name="categoria" id="categoria">
+                <select name="categoria" id="categoria">
+                </select>
+                </select>
+                <!-- <input type="text" name="categoria" id="categoria"> -->
                 <div class="error-retail"></div>
             </div>
 
-            <!-- campo detalles -->
+            <!-- campo descripcioncorta -->
             <div class="input-group"> 
-                <label for="detalles">Detalles</label>
-                <input type="text" name="detalles" id="detalles">
+                <label for="descripcioncorta">Descripción corta</label>
+                <input type="text" name="descripcioncorta" id="descripcioncorta">
+                <div class="error-retail"></div>
+            </div>
+
+            <!-- campo descripcionlarga -->
+            <div class="input-group"> 
+                <label for="descripcionlarga">Descripcion larga</label>
+                <input type="text" name="descripcionlarga" id="descripcionlarga">
                 <div class="error-retail"></div>
             </div>
 
@@ -88,16 +100,34 @@
                 <div class="error-retail"></div>
             </div>
 
+            <!-- campo edaddesde -->
+            <div class="input-group"> 
+                <label for="edaddesde">Edad desde</label>
+                <input type="text" name="edaddesde" id="edaddesde">
+                <div class="error-retail"></div>
+            </div>
+
+            <!-- campo edadhasta -->
+            <div class="input-group"> 
+                <label for="edadhasta">Edad hasta</label>
+                <input type="text" name="edadhasta" id="edadhasta">
+                <div class="error-retail"></div>
+            </div>
+
+            
+
             <!-- campo envio -->
             <div class="input-group"> 
-                <label for="envio">Envio</label>
+                <label for="envio">Envio sin cargo</label>
                 <input type="checkbox" name="envio" id="envio">
             </div>
 
             <!-- boton de envio -->
 
-            <button>Agregar</button>
+            <button id="botton-agregar">Agregar</button>
         </form>
+
+        <button onclick="localStorage.removeItem('productos'); location.reload()">Limpiar productos</button>
 
         <hr>
 <!-- --------------------------------------- -->

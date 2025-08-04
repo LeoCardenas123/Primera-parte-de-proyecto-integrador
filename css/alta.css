@@ -1,24 +1,13 @@
-main{
-    width: 100%;
-    height: auto;
-    min-height: 67vh;
-    padding: 20px;
-    background-color: #ddd;
-}
-
-main h1{
-    text-align: center;
-    margin: 0;
-}
-
 .alta-form{
-    background-color: rgb(190, 55, 55);
+    background-color: #272534;
     width: 80%;
     margin: 20px auto;
     padding: 30px;
     color: white;
-    border-radius: 20px;
-    border: 1px dashed yellow;
+
+    border: 1px solid black;
+    border-radius: 8px;
+    overflow: hidden;
 }
 
 .input-group{
@@ -26,13 +15,8 @@ main h1{
     padding: 3px;
     text-align: center;
 }
-main{
-    max-width: 100%;
-    height: 100%;
-    min-height: 82vh;
-}
 main label{
-    color: #badc58;
+    color: white;
     text-transform: capitalize;
     display: block;
     margin-bottom: 5px;
@@ -47,10 +31,17 @@ main button{
 
     height: 40px;
     width: 40%;
-    background-color: #6ab04c;
-    color: #130f40;
-    font-size: 20px;
+    background-color: #307821;
+    color: black;
+    font-size: 24px;
+    text-transform: uppercase;
     border-radius: 5px;
+    outline: none;
+}
+main button:active{
+    background-color: #344e29;
+    border: solid 2px rgb(67, 65, 65);
+
 }
 
 main input[type="text"]{
@@ -58,20 +49,28 @@ main input[type="text"]{
     height: 30px;
     font-size: 20px;
     border-radius: 5px;
-    background-color: #95afc0;
+    background-color: gray;
 }
 main input[type="checkbox"]{
     width: 20px;
     height: 20px;
 }
 
-/* -------maquetado de tabla ------------ */
 
+main select{
+    width: 70%;
+    height: 26px;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: gray;
+}
+
+/* -------maquetado de tabla ------------ */
 th, td{
     border: 1px solid black;
     height: 30px;
     font-size: 100%;
-
+    
     text-align: center;
 }
 
@@ -87,7 +86,11 @@ th{
     color: white;
 }
 
-
+td{
+    text-align: left;
+    padding-left: 8px;
+    text-transform: uppercase;
+}
 .imagenes-tabla{
-    width: 80px;
+    width: 100px;
 }

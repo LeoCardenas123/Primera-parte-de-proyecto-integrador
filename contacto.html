@@ -4,13 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacto</title>
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="css/estilosGenerales.css">
 </head>
 <body>
     
     <header>
         <nav>
-            <ul>
+            <div class="contenedor-responsive">
+                <img src="https://cdn4.iconfinder.com/data/icons/fluent-solid-20px-vol-4/20/ic_fluent_line_horizontal_3_20_filled-512.png" alt="lista-directorios" class="lista-directorios-icono" id="img-menu">
+                
+                <ul class="lista-plegable"> 
+                    <li> <a href="./index.html">Inicio</a> </li>
+                    <li> <a href="./alta.html">Alta</a> </li>
+                    <li> <a href="./carrito.html">Carrito</a> </li>
+                    <li> <a href="./contacto.html">Contacto</a> </li>
+                    <li> <a href="./nosotros.html">Nosotros</a> </li>
+                    <li> <a href="./otra.html">Otra</a> </li>
+                </ul>
+
+                <img src="https://cdn2.iconfinder.com/data/icons/250-perfect-vector-pictograms/33/9.12-256.png" alt="boton-salir" class="boton-salir">
+            </div>
+
+            <ul class="lista-para-navegar">
                 <li> <a href="./index.html">Inicio</a> </li>
                 <li> <a href="./alta.html">Alta</a> </li>
                 <li> <a href="./carrito.html">Carrito</a> </li>
@@ -19,27 +34,24 @@
                 <li> <a href="./otra.html">Otra</a> </li>
             </ul>
         </nav>
-        <div>
-            <div id="logo">
-                <a href="index.html"><img src="https://cdn3.iconfinder.com/data/icons/shopping-28/32/storefront-64.png" alt="Logo"></a>
-            </div>
+        
+        <div id="barra-de-busqueda">
+            <a href="index.html" id="logo"><img src="https://cdn3.iconfinder.com/data/icons/shopping-28/32/storefront-64.png" alt="Logo"></a>
 
-            <div id="barra-busqueda">
-                <form action="#">
-                    <label for="buscar">Buscar</label>
-                    <input type="text" id="buscar">
-                    <input type="submit" value="Buscar">
-                </form>
-            </div>
+            <form action="#" id="buscador">
+                <input type="text" id="rectangulo-buscar">
 
-            <div id="boton-carrito">
-                <a href="carrito.html"><img src="https://cdn4.iconfinder.com/data/icons/eon-ecommerce-i-1/32/cart_shop_buy_retail-64.png" alt="Boton-carrito"></a>
-            </div>
+                <img src="https://cdn2.iconfinder.com/data/icons/general-ui-outlined/16/search-512.png" alt="" id="lupa-busqueda">
+            </form>
+
+            <a href="carrito.html" id="boton-carrito">
+                <img src="https://cdn4.iconfinder.com/data/icons/eon-ecommerce-i-1/32/cart_shop_buy_retail-64.png" alt="Boton-carrito">
+            </a>
         </div>
     </header>
 
     <main>
-        <div class="section-cards">
+        <div class="section-encabezado">
             <h1>Contacto</h1>
         </div>
 
