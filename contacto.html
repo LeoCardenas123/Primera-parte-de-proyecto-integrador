@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacto</title>
     <link rel="stylesheet" href="css/estilosGenerales.css">
+    <link rel="stylesheet" href="css/contacto.css">
 </head>
 <body>
     
@@ -55,9 +56,26 @@
             <h1>Contacto</h1>
         </div>
 
-        <div class="section-cards-body">
-           aca van los datos de contacto
+        <form id="formulario-comentarios">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" required></textarea>
+
+            <button type="submit">Enviar</button>
+        </form>
+
+        <h2>Comentarios</h2>
+        <div id="div-comentarios">
+            <ul id="lista-comentarios">
+
+            </ul>
         </div>
+        <button id="boton-borrar">Borrar todos los comentarios</button>
     </main>
 
     <footer>
@@ -65,6 +83,6 @@
     </footer>
 
     <script src="js/contacto.js"></script>
-    <script src="js/main.js"></script>
+    <script src="js/main.js"></script> 
 </body>
 </html>

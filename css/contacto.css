@@ -1,0 +1,116 @@
+#formulario-comentarios {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+
+    font-size: 32px;
+}
+#formulario-comentarios label {
+    font-weight: bold;
+}
+
+#formulario-comentarios input {
+    width: 50%;
+    height: 30px;
+    border: 1px solid #838383;
+    border-radius: 4px;
+    margin-bottom: 8px;
+
+    padding-left: 8px;
+
+    resize: none;
+
+    font-size: 28px;
+    text-align: left;
+    line-height: 50px;
+}
+#formulario-comentarios textarea {
+    width: 100%;
+    max-width: 100%;
+    height: 30px;
+    max-height: 100px;
+    border: 1px solid #838383;
+    border-radius: 4px;
+    margin-bottom: 8px;
+
+    padding-left: 8px;
+    padding-top: 8px;
+
+    font-size: 24px;
+    text-align: left;
+}
+#formulario-comentarios button {
+    width: 40%;
+    margin: 0 auto 0 auto;
+    border-radius: 8px;
+    background-color: blue;
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+h2{
+    font-size: 32px;
+}
+
+#div-comentarios{
+}
+
+#lista-comentarios{
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+
+    padding-left: 8px;
+
+    list-style: none;
+}
+
+#lista-comentarios p{
+    margin: 0;
+}
+
+#lista-comentarios span{
+    font-weight: bold;
+    font-size: 18px;
+}
+
+#lista-comentarios li{
+    background-color: #f0f0f0;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 8px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+}
+
+
+#boton-borrar{
+    background-color: red;
+    margin: 0 auto 0 auto;
+    font-weight: bold;
+    font-size: 18px;
+
+    padding: 4px 8px;
+    margin-bottom: 8px;
+    cursor: pointer;
+
+}
+
+.boton-borrar-seleccionado{
+    background-color: red;
+    color: white;
+    font-size: 14px;
+    padding: 4px;
+    width: 20%;
+    margin: 0 0 0 auto;
+    cursor: pointer;
+
+}

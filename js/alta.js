@@ -25,6 +25,22 @@ const agregarCategoriaAFormulario = () => {
     }
 }
 
+function mostrarMensajeError(msj){
+    console.error(msj)
+}
+function validarInputs(valor){
+    let mensaje = 'el minimod de caracteres es 3'
+    const longitud = valor.length
+
+    if(longitud < 3){
+        mostrarMensajeError(mensaje)
+        return false
+    } else {
+        return valor
+    }
+}
+validarInputs(refNombre.value)
+
 function agregar(e){
     e.preventDefault()
 
