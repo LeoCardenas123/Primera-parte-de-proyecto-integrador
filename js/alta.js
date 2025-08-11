@@ -1,7 +1,7 @@
 //-------------------------
 // Variables globales
 //-------------------------
-
+let formularioAlta = document.querySelector('.alta-form');
 //-------------------------
 // Funciones Globales
 //-------------------------
@@ -25,21 +25,124 @@ const agregarCategoriaAFormulario = () => {
     }
 }
 
-function mostrarMensajeError(msj){
+/* ---------------------- */
+
+function mensajeError(msj){
+    console.error(msj)
+}
+
+function validarTexto(texto, campo, min=3, max=40) {
+    if (!texto || texto.trim().length < min) {
+        mensajeError(`El campo ${campo} debe tener al menos ${min} caracteres`);
+        return false;
+    }
+    if (texto.length > max) {
+        mensajeError(`El campo ${campo} no debe exceder los ${max} caracteres`);
+        return false;
+    }else{
+        return true;
+    }
+}
+
+function validarNumero(valor, campo) {
+    const numero = Number(valor);
+    if (isNaN(numero) || numero < 0) {
+        mensajeError(`El campo ${campo} debe ser un número positivo`);
+        return false;
+    }else{
+        return true;
+    }
+}
+
+function validarEntero(valor, campo) {
+    const numero = parseInt(valor);
+    if (isNaN(numero) || numero < 0 || !Number.isInteger(numero)) {
+        mensajeError(`El campo ${campo} debe ser un número entero positivo`);
+        return false;
+    }else{
+        return true;
+    }
+}
+
+function validarSeleccion(valor, campo) {
+    if (!valor) {
+        mensajeError(`Debes seleccionar una opción para ${campo}`);
+        return false;
+    }
+    else{
+        return true;
+    }
+}
+
+function agregar(e){
+    e.preventDefault();
+
+    const refNombre = document.querySelector('#nombre').encodeUriComponent();
+    const refPrecio = document.querySelector('#precio');
+    const refStock = document.querySelector('#stock');
+    const refMarca = document.querySelector('#marca').encodeUriComponent();
+    const refCategoria = document.querySelector('#categoria');
+    const refDescripcionCorta = document.querySelector('#descripcioncorta').encodeUriComponent();
+    const refDescripcionLarga = document.querySelector('#descripcionlarga').encodeUriComponent();
+    const refEdadDesde = document.querySelector('#edaddesde');
+    const refEdadHasta = document.querySelector('#edadhasta');
+    const refFoto = document.querySelector('#foto');
+    const refEnvio = document.querySelector('#envio');
+
+    // Validaciones
+    if (!validarTexto(refNombre.value, "Nombre")) return;
+    if (!validarNumero(refPrecio.value, "Precio")) return;
+    if (!validarEntero(refStock.value, "Stock")) return;
+    if (!validarTexto(refMarca.value, "Marca")) return;
+    if (!validarSeleccion(refCategoria.value, "Categoría")) return;
+    if (!validarTexto(refDescripcionCorta.value, "Descripción Corta", 5, 100)) return;
+    if (!validarTexto(refDescripcionLarga.value, "Descripción Larga", 10, 500)) return;
+
+    
+    if (refEdadDesde.value && refEdadHasta.value) {
+        const desde = parseInt(refEdadDesde.value);
+        const hasta = parseInt(refEdadHasta.value);
+        if (isNaN(desde) || isNaN(hasta) || desde < 0 || hasta < 0 || desde > hasta) {
+            mensajeError('La edad "Desde" debe ser menor o igual a la edad "Hasta" y ambas positivas');
+            return;
+        }
+    }
+
+    
+    if (refFoto.value && !refFoto.value.startsWith('http')) {
+        mensajeError('La URL de la foto debe comenzar con "http"');
+        return;
+    }
+
+    
+    const producto = {
+        nombre: refNombre.value.trim(),
+        precio: +refPrecio.value,
+        stock: parseInt(refStock.value),
+        marca: refMarca.value.trim(),
+        categoria: refCategoria.value,
+        descripcionCorta: refDescripcionCorta.value.trim(),
+        descripcionLarga: refDescripcionLarga.value.trim(),
+        edadDesde: refEdadDesde.value,
+        edadHasta: refEdadHasta.value,
+        foto: refFoto.value.trim(),
+        envio: refEnvio.checked
+    };
+
+
+/* function mensajeError(msj){
     console.error(msj)
 }
 function validarInputs(valor){
-    let mensaje = 'el minimod de caracteres es 3'
-    const longitud = valor.length
-
-    if(longitud < 3){
-        mostrarMensajeError(mensaje)
+    if(valor < 3){
+        mensajeError('El campo no puede tener menos de 3 carcteres')
         return false
-    } else {
+    }
+    else{
         return valor
     }
 }
-validarInputs(refNombre.value)
+
 
 function agregar(e){
     e.preventDefault()
@@ -58,7 +161,7 @@ function agregar(e){
     const refFoto = document.querySelector('#foto')
     const refEnvio = document.querySelector('#envio')
 
-    const nombre = refNombre.value 
+    const nombre = refNombre.value
     const precio = refPrecio.value 
     const stock = refStock.value 
     const marca = refMarca.value 
@@ -82,7 +185,7 @@ function agregar(e){
         edadHasta: edadHasta,
         foto: foto,
         envio: envio 
-    }
+    } */
     console.error(producto)
 
     refNombre.value = ''
